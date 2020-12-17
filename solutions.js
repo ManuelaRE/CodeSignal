@@ -1,3 +1,4 @@
+// THE JOURNEY BEGINS
 // 1. Write a function that returns the sum of two numbers.
 
 function add(param1, param2) {
@@ -27,3 +28,26 @@ function checkPalindrome(inputString) {
             
     return  (str === strReversed) ? true : false;
 }
+
+
+//EDGE OF THE OCEAN
+// 4. Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+function adjacentElementsProduct(inputArray) {    
+    let arrayofNum = [];
+    
+    for(let i = 0; i < inputArray.length - 1; i++) {
+        arrayofNum.push(inputArray[i] * inputArray[i + 1]);
+    }
+    return Math.max(...arrayofNum)
+}
+
+// 5. Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
+// area of a sqaure added to the area of the previous square
+function shapeArea(n) {
+    if(n == 1) return 1;
+    return n**2 + (n-1)**2
+}
+
+
+
